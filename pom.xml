@@ -61,6 +61,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		<finalName>jenkins-docker</finalName>
 	</build>
 
 </project>
