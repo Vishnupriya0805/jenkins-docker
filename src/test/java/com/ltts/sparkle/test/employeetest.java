@@ -32,14 +32,14 @@ public class employeetest {
 	@Order(1)
 	public void testCreate() {
 		Employee e = new Employee();
-		e.setEmpid(1);
+		e.setEmpid(2);
 		e.setEmpName("Priya");
 		e.setEmailAddress("abc@gmail.com");
 		e.setGender("Female");
 		e.setSalary("50000");
 		e.setMobile("9087689546");
 		eb.save(e);
-		assertNotNull(eb.findById(1).get());
+		assertNotNull(eb.findById(2).get());
 	}
 	
 	@Test
@@ -53,17 +53,17 @@ public class employeetest {
 	@Test
 	@Order(3)
 	public void testUpdate() {
-		Employee e2 = eb.findById(1).get();
+		Employee e2 = eb.findById(2).get();
 		e2.setSalary("40000");
 		eb.save(e2);
-		assertNotEquals(40000,eb.findById(1).get().getSalary());
+		assertNotEquals(40000,eb.findById(2).get().getSalary());
 	}
 	
 	@Test
 	@Order(4)
 	public void testDelete () {
-		eb.deleteById(1);
-		assertThat(eb.existsById(1)).isFalse();
+		eb.deleteById(2);
+		assertThat(eb.existsById(2)).isFalse();
 		
 	}
 	
