@@ -13,5 +13,6 @@ pipeline {
                   sh 'docker build -t Vishnupriya0805/jenkins-docker .'
                 }
             }
+         }
     }
 }
