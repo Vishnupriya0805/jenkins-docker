@@ -4,11 +4,7 @@ pipeline {
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
-  agent {
-    kubernetes {
-      inheritFrom 'kubepod'
-    }
-  }
+  agent any
   stages {
     stage('Cloning Git') {
       steps {
