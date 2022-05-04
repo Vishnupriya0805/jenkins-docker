@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "vishnupriya0805/docker-kuber"
+    registry = "vishnupriya0805/kuber"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
